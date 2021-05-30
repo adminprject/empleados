@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('empleados','empleadosController@index');
+Route::get('empleados/create','empleadosController@create');
+Route::post('empleados','empleadosController@store');
+Route::get('empleados/{id}/edit','empleadosController@edit');
+Route::post('empleados/update/{id}','empleadosController@update');
+Route::post('empleados/delete/{id}','empleadosController@delete');
+
+

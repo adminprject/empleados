@@ -22,6 +22,9 @@ class CreateEmpleadosTable extends Migration
             $table->unsignedBigInteger('area_id');
             $table->foreign('area_id')->references('id')->on('areas');
 
+            $table->bigInteger('boletin');
+            $table->longText('descripcion');
+
             $table->timestamps();
         });
     }
